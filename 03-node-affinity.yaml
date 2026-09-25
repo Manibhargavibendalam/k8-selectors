@@ -17,14 +17,15 @@ spec:
           #   operator: In
           #   values:
           #   - ssd
+      # soft rule 
       preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         preference:
           matchExpressions:
-          - key: label-1
+          - key: project
             operator: In
             values:
-            - key-1
+            - roboshop 
   containers:
   - name: nginx
     image: nginx
