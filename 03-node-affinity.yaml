@@ -13,26 +13,11 @@ spec:
             operator: In
             values:
             - us-east-1b
-          # - key: disktype
-          #   operator: In
-          #   values:
-          #   - ssd
-      # soft rule
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 100
-        preference:
-          matchExpressions:
-          - key: project
+          - key: disktype
             operator: In
             values:
-            - roboshop
-      - weight: 10
-        preference:
-          matchExpressions:
-          - key: project
-            operator: In
-            values:
-            - amazon
+            - ssd
+     
   containers:
   - name: nginx
     image: nginx
